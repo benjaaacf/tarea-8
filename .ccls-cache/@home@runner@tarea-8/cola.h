@@ -19,4 +19,4 @@ int isQueueFull(Queue *queue);
 int enqueue(Queue *queue, const char *student);
 int dequeue(Queue *queue, char *student);
 
-#endif /* COLA_H */
+#endif

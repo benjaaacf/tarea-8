@@ -403,7 +403,7 @@ int main() {
     printf("3. Mostrar todos los libros\n");
     printf("4. Reservar libro\n");
     printf("5. Cancelar reservacion\n");
-    printf("6. Retirar libro\n");
+    printf("6. Prestar libro\n");
     printf("7. Regresar libro\n");
     printf("8. Mostrar libros prestados\n");
     printf("9. Importar libros csv\n");

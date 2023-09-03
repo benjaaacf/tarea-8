@@ -14,7 +14,7 @@ int isQueueFull(Queue *queue) { return queue->size == maxReserves; }
 int enqueue(Queue *queue, const char *student) {
   if (isQueueFull(queue)) {
     printf("Cola de reservas llena, no se pueden agregar más reservas.\n");
-    return 0; // Indicar que no se pudo agregar
+    return 0; // Indicar que no se agrego
   }
 
   if (isQueueEmpty(queue)) {
@@ -25,24 +25,24 @@ int enqueue(Queue *queue, const char *student) {
 
   strcpy(queue->data[queue->rear].student, student);
   queue->size++;
-  return 1; // Indicar que se agregó con éxito
+  return 1; // Indicar que se agrego
 }
 
 int dequeue(Queue *queue, char *student) {
   if (isQueueEmpty(queue)) {
     printf("Cola de reservas vacía.\n");
-    return 0; // Indicar que no se pudo quitar
+    return 0; // Indicar que no se quito
   }
 
   strcpy(student, queue->data[queue->front].student);
   queue->size--;
 
   if (queue->front == queue->rear) {
-    // Último elemento en la cola
+    // Ultimo elemento en la cola
     queue->front = queue->rear = -1;
   } else {
     queue->front = (queue->front + 1) % maxReserves;
   }
 
-  return 1; // Indicar que se quitó con éxito
+  return 1;
 }
